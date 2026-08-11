@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.javaomok</groupId>
+    <artifactId>omok-game</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <properties>
+        <maven.compiler.release>17</maven.compiler.release>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+    <build>
+        <sourceDirectory>scr</sourceDirectory>
+        <resources>
+            <resource><directory>scr</directory><excludes><exclude>**/*.java</exclude></excludes></resource>
+            <resource><directory>img</directory><targetPath>img</targetPath></resource>
+            <resource><directory>Weather_img</directory><targetPath>Weather_img</targetPath></resource>
+        </resources>
+        <plugins>
+            <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-compiler-plugin</artifactId><version>3.13.0</version></plugin>
+            <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.5.0</version></plugin>
+        </plugins>
+    </build>
+    <dependencies>
+        <dependency><groupId>com.oracle.database.jdbc</groupId><artifactId>ojdbc11</artifactId><version>23.4.0.24.05</version></dependency>
+        <dependency><groupId>org.json</groupId><artifactId>json</artifactId><version>20240303</version></dependency>
+        <dependency><groupId>com.formdev</groupId><artifactId>flatlaf</artifactId><version>3.5</version></dependency>
+        <dependency><groupId>com.toedter</groupId><artifactId>jcalendar</artifactId><version>1.4</version></dependency>
+        <dependency><groupId>com.sun.mail</groupId><artifactId>javax.mail</artifactId><version>1.6.2</version></dependency>
+        <dependency><groupId>javax.activation</groupId><artifactId>activation</artifactId><version>1.1.1</version></dependency>
+        <dependency><groupId>org.junit.jupiter</groupId><artifactId>junit-jupiter</artifactId><version>5.11.0</version><scope>test</scope></dependency>
+    </dependencies>
+</project>

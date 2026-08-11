@@ -1,0 +1,38 @@
+# Build output and IDE state
+bin/
+target/
+build/
+out/
+*.class
+.metadata/
+.settings/
+.idea/
+*.iml
+.classpath
+.project
+
+# Local runtimes and manually downloaded dependencies
+lib/
+
+# Secrets and machine-local configuration
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+credentials*
+application-secret.yml
+
+# Personal, downloaded and generated files
+downloads/
+profile_image_output.png
+received_profile_image.png
+
+# Legacy duplicate source roots not used by the Maven build
+/src/
+/ui/
+
+# Logs and operating-system files
+*.log
+.DS_Store
+Thumbs.db
